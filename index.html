@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empire Lab — Open Research</title>
+  <meta name="description" content="Independent signal detection and data science research. FAERS pharmacovigilance, GEO genomics, ClinicalTrials publication gaps.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2128;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --yellow: #d29922;
+      --red: #f85149;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 0 16px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0 16px;
+      margin-bottom: 32px;
+    }
+    header h1 { font-size: 20px; font-weight: 600; }
+    header p { color: var(--muted); margin-top: 4px; font-size: 13px; }
+    .grid { max-width: 900px; margin: 0 auto; }
+    .study-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .study-card h2 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .study-card p { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-right: 6px;
+    }
+    .badge-live { background: rgba(63, 185, 80, 0.15); color: var(--green); border: 1px solid rgba(63, 185, 80, 0.4); }
+    .badge-planned { background: rgba(88, 166, 255, 0.1); color: var(--accent); border: 1px solid rgba(88, 166, 255, 0.3); }
+    .badge-method { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+    .study-meta { margin-top: 10px; font-size: 12px; color: var(--muted); }
+    .study-meta span { margin-right: 16px; }
+    .findings-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .coming-soon { opacity: 0.5; cursor: default; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      margin-top: 48px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .stat { font-size: 13px; }
+    .stat strong { color: var(--text); }
+  </style>
+</head>
+<body>
+<div class="grid">
+  <header>
+    <h1>Empire Lab — Open Research</h1>
+    <p>Independent signal detection · pharmacovigilance · genomics · publication integrity</p>
+  </header>
+
+  <!-- RS-001: FAERS SSRI -->
+  <div class="study-card">
+    <h2>RS-001 — FAERS SSRI Signal Detection</h2>
+    <p>Post-market pharmacovigilance signal detection across 6 SSRIs using 20M+ FDA FAERS reports.
+       Proportional Reporting Ratio (PRR) analysis with Evans criteria filtering.
+       Top finding: fluvoxamine × rhabdomyolysis PRR=826 (CYP1A2 drug interaction cluster).</p>
+    <div>
+      <span class="badge badge-live">Live</span>
+      <span class="badge badge-method">PRR · FAERS · openFDA</span>
+      <span class="badge badge-method">Python</span>
+    </div>
+    <div class="study-meta">
+      <span>Reports analyzed: <strong>20M+</strong></span>
+      <span>Signals detected: <strong>230</strong></span>
+      <span>Novel (not in labels): <strong>199</strong></span>
+      <span>Published: <strong>2026-03-14</strong></span>
+    </div>
+    <a class="findings-link" href="findings/index.html">View findings →</a>
+  </div>
+
+  <!-- RS-002: GEO -->
+  <div class="study-card coming-soon">
+    <h2>RS-002 — GEO Orphan Query: Lung Cancer Gene Expression</h2>
+    <p>Mining NCBI GEO for underanalyzed gene expression datasets in lung cancer.
+       DESeq2 differential expression on datasets with no linked publication or citation.</p>
+    <div>
+      <span class="badge badge-planned">Planned</span>
+      <span class="badge badge-method">DESeq2 · GEO · R/Python</span>
+    </div>
+    <div class="study-meta">
+      <span>Status: <strong>In pipeline</strong></span>
+    </div>
+  </div>
+
+  <!-- RS-003: ClinicalTrials -->
+  <div class="study-card coming-soon">
+    <h2>RS-003 — ClinicalTrials.gov Publication Gap Scan</h2>
+    <p>Identifying registered depression trials (2015–2020) with posted results but no linked
+       peer-reviewed publication. Ranked by enrollment size and sponsor type.</p>
+    <div>
+      <span class="badge badge-planned">Planned</span>
+      <span class="badge badge-method">ClinicalTrials API · XML</span>
+    </div>
+    <div class="study-meta">
+      <span>Status: <strong>In pipeline</strong></span>
+    </div>
+  </div>
+
+  <footer>
+    Open research by <a href="https://www.linkedin.com/in/glennhighcove/">Glenn Highcove</a> ·
+    <a href="https://github.com/ghighcove/research-science">GitHub</a> ·
+    Methods and code always open · Data sources: FDA FAERS, NCBI GEO, ClinicalTrials.gov
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+title: Empire Lab — Open Research
+description: Independent signal detection and data science research
+url: "https://ghighcove.github.io"
+baseurl: "/research-science"
+theme: null
+plugins: []
+exclude:
+  - tasks/
+  - pipelines/
+  - data/
+  - CLAUDE.md
+  - "*.py"
+  - "*.db"
