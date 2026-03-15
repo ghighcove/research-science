@@ -16,8 +16,8 @@ No wet lab. Rigorous methodology. Transparent publication.
 - ClinicalTrials: download XML → parse → gap analysis → synthesis
 
 ## Python Environment
-- E:/Python/Python38-32/python.exe (default, wardriving/analysis scripts)
-- C:/Users/ghigh/AppData/Local/Python/bin/python3.exe (publishing tools)
+- Python 3.8 32-bit (default, wardriving/analysis scripts)
+- Python 3.14 64-bit (publishing tools)
 - Emperor (arriving ~Apr 7) will be primary compute for weekly runs
 
 ## File Conventions

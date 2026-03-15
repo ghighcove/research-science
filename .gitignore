@@ -1,4 +1,5 @@
 data/
+tasks/
 *.db
 __pycache__/
 *.pyc
